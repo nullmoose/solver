@@ -12,8 +12,8 @@ end
   
 bigpali = 0
   
-999.downto(1) do |i|
-  999.downto(1) do |n|
+999.downto(100) do |i|
+  999.downto(100) do |n|
     if check_palindrome((i*n).to_s) == true
       if i*n > bigpali
         bigpali = i*n
