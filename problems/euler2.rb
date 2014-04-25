@@ -7,7 +7,7 @@ def fib (prev, new, sum)
     return sum
   end
   
-  if new % 2 == 0
+  if new.even?
     sum += new
   end
   

@@ -38,14 +38,14 @@ end
 found = false
 
 500.downto(4) do |b|
-  if b%2 == 0
+  if b.even?
     mn = findfactors(b/2)
   else
     mn = findfactors(b)
   end
   
   for i in 0...mn[0].length
-    if b%2 == 0
+    if b.even?
       a = find_a(mn[0][i], mn[1][i])
       c = find_c(mn[0][i], mn[1][i])
     else

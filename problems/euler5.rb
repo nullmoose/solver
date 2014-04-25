@@ -2,11 +2,11 @@
 #What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 found = false
-n = 2518
+n = 2500
 
 while !found do
   found = true
-  n +=2
+  n += 20
   
   for i in 1..20
     if n % i != 0
@@ -14,6 +14,7 @@ while !found do
       break
     end
   end
+  
 end
 
 puts n

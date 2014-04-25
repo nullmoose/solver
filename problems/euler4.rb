@@ -2,7 +2,7 @@
 #Find the largest palindrome made from the product of two 3-digit numbers.
 
 def check_palindrome(s)
-  for i in 0...s.length
+  for i in 0...(s.length/2).floor
     if s[i] != s[s.length-i-1]
       return false
     end
