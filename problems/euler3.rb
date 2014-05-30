@@ -12,12 +12,24 @@ def checkprime(n)
 end
 
 num = 600851475143
+largeprime = 0
 
-Math.sqrt(num).round.downto(2) do |i|
+for i in 2..Math.sqrt(num)
   if num % i == 0
     if checkprime(i) == true
-      puts i
-      break
+      if i > largeprime
+        largeprime = i
+      end
+    
+    if checkprime(num/i) == true
+      if i > largeprime
+        largeprime = num/i
+      end
+      
+    end
+    
     end
   end
 end
+
+puts largeprime

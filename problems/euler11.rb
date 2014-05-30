@@ -58,7 +58,7 @@ def checkprod(start, dir, g)
      p *= g[start[0]+(dir[0]*i)][start[1]+(dir[1]*i)]
   end
    
-   return p
+  return p
 end
 
 grid = []
@@ -73,21 +73,31 @@ x = 0
 grid.each do |e|
   x = 0
   e.each do |i|
-    if checkprod([y,x],[1,0], grid) > prod
-      prod = checkprod([y,x],[1,0], grid)
+    
+    n = checkprod([y,x],[1,0], grid)
+    
+    if n > prod
+      prod = n
     end
     
-    if checkprod([y,x],[0,1], grid) > prod
-      prod = checkprod([y,x],[0,1], grid)
+    n = checkprod([y,x],[0,1], grid)
+    
+    if n > prod
+      prod = n
     end
     
-    if checkprod([y,x],[1,1], grid) > prod
-      prod = checkprod([y,x],[1,1], grid)
+    n = checkprod([y,x],[1,1], grid)
+    
+    if n > prod
+      prod = n
+    end 
+    
+    n = checkprod([y,x],[-1,1], grid)
+    
+    if n > prod
+      prod = n
     end
     
-    if checkprod([y,x],[-1,1], grid) > prod
-      prod = checkprod([y,x],[-1,1], grid)
-    end
     x+=1
     
   end
